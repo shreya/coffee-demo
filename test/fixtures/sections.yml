@@ -1,0 +1,9 @@
+one:
+  heading: MyString
+  body: MyText
+  post_id: 1
+
+two:
+  heading: MyString
+  body: MyText
+  post_id: 1

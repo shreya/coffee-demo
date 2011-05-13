@@ -1,0 +1,21 @@
+= simple_form_for(@post) do |f|
+	- if @post.errors.any?
+		#error_explanation
+			%h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+			%ul
+				- @post.errors.full_messages.each do |msg|
+					%li= msg
+
+
+	.inputs
+		= f.input :title, :input_html => {:size => 46}
+		= f.input :body, :input_html => {:rows =>5}
+
+		= f.simple_fields_for :sections do |section_f|
+			.section
+				%h2 Section
+				= section_f.input :heading, :input_html => {:size => 46}
+				= section_f.input :body, :input_html => {:rows =>5}
+
+	.actions
+		= f.button :submit

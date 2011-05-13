@@ -1,0 +1,20 @@
+<% title "Section" %>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @section.heading %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @section.body %>
+</p>
+<p>
+  <strong>Post:</strong>
+  <%= @section.post_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_section_path(@section) %> |
+  <%= link_to "Destroy", @section, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sections_path %>
+</p>

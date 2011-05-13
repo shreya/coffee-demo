@@ -1,0 +1,12 @@
+%h1= @post.title
+%p= sanitize @post.body
+
+- for section in @post.sections
+  .section
+    %h2= section.heading
+    .body= sanitize section.body
+    %hr
+
+.postNav
+  .prev= post_link(:previous)
+  .next= post_link(:next)
