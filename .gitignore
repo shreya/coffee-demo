@@ -6,3 +6,4 @@ tmp/**/*
 coverage
 /db/schema.rb
 .DS_Store
+/public/javascripts/post.js
